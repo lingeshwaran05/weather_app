@@ -1,0 +1,40 @@
+#description {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+#locationName {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+#temp {
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+#subtemp {
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+#windspeed {
+    margin-bottom: 5px;
+}
+
+.container {
+    text-align: center;
+    border: 2px solid black;
+    width: 400px;
+    background-color: rgb(250, 235, 215, 0.3);
+    padding: 20px;
+    border-radius: 5%;
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+}
+
+#map {
+    height: 100vh;
+    position: relative;
+}
