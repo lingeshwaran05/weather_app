@@ -7,7 +7,7 @@ let temperature = document.getElementById("temp");
 let mintemp = document.getElementById("mintemp");
 let maxtemp = document.getElementById("maxtemp");
 let windspeed = document.getElementById("windspeed");
-
+const apikey = process.env.API_KEY;
 
 if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(async position => {
@@ -37,7 +37,7 @@ if (navigator.geolocation) {
     })
 };
 async function getWeatherData(lat, lon) {
-    let api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=3606d9b9bae46370a92f9520778cf33f`;
+    let api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apikey}`;
     let response = await fetch(api);
     let data = await response.json();
     console.log(data);
